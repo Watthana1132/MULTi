@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.multitasks.store.ScanGateTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-04T00:10:23.981Z" hostname="WATTRUSH" time="0.006">
+  <properties/>
+  <testcase name="savedBarcodeCannotImmediatelyDuplicate" classname="com.multitasks.store.ScanGateTest" time="0.005"/>
+  <testcase name="nextDifferentProductIsImmediatelyAccepted" classname="com.multitasks.store.ScanGateTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

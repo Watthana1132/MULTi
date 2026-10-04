@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.multitasks.store.CaptureTransitionsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-04T00:10:23.871Z" hostname="WATTRUSH" time="0.09">
+  <properties/>
+  <testcase name="historyFiltersDateRangeTypeQueryAndTrash" classname="com.multitasks.store.CaptureTransitionsTest" time="0.08"/>
+  <testcase name="validatesQuantityPhotoAndBarcode" classname="com.multitasks.store.CaptureTransitionsTest" time="0.002"/>
+  <testcase name="rememberQuantityIsOptIn" classname="com.multitasks.store.CaptureTransitionsTest" time="0.002"/>
+  <testcase name="busyDraftCannotBeReset" classname="com.multitasks.store.CaptureTransitionsTest" time="0.002"/>
+  <testcase name="rescanReplacesBothImagesButKeepsQuantityDateAndSession" classname="com.multitasks.store.CaptureTransitionsTest" time="0.001"/>
+  <testcase name="savePreparesNextWithoutChangingSession" classname="com.multitasks.store.CaptureTransitionsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

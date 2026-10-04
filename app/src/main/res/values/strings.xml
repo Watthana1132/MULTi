@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MULTI-TASKS</string>
+    <string name="author">App by Watthana</string>
+    <string name="home">หน้าหลัก</string>
+    <string name="camera">กล้อง</string>
+    <string name="more">เพิ่มเติม</string>
+    <string name="history">ประวัติ</string>
+    <string name="create_work">สร้างงาน</string>
+    <string name="quantity">จำนวนสินค้า</string>
+    <string name="save">บันทึก</string>
+    <string name="rescan">สแกนใหม่</string>
+    <string name="retake">ถ่ายใหม่</string>
+    <string name="back">ย้อนกลับ</string>
+    <string name="settings">ตั้งค่า</string>
+    <string name="allow_camera">อนุญาตกล้อง</string>
+</resources>

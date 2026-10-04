@@ -1,0 +1,218 @@
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\gradle\wrapper\gradle-wrapper.properties:3: Warning: A newer version of Gradle than 9.2.1 is available: 9.8.0 [AndroidGradlePluginVersion]
+distributionUrl=https\://services.gradle.org/distributions/gradle-9.2.1-bin.zip
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\build.gradle:17: Warning: A newer version of androidx.compose:compose-bom than 2025.04.01 is available: 2026.09.00 [GradleDependency]
+    implementation platform('androidx.compose:compose-bom:2025.04.01')
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\build.gradle:18: Warning: A newer version of androidx.activity:activity-compose than 1.10.1 is available: 1.13.0 [GradleDependency]
+    implementation 'androidx.activity:activity-compose:1.10.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\build.gradle:23: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.9.0 is available: 2.11.0 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.9.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\build.gradle:24: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.9.0 is available: 2.11.0 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.9.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\build.gradle:25: Warning: A newer version of androidx.navigation:navigation-compose than 2.9.0 is available: 2.10.2 [GradleDependency]
+    implementation 'androidx.navigation:navigation-compose:2.9.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\build.gradle:27: Warning: A newer version of androidx.exifinterface:exifinterface than 1.4.0 is available: 1.4.2 [GradleDependency]
+    implementation 'androidx.exifinterface:exifinterface:1.4.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\build.gradle:28: Warning: A newer version of androidx.camera:camera-camera2 than 1.4.2 is available: 1.6.2 [GradleDependency]
+    implementation 'androidx.camera:camera-camera2:1.4.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\build.gradle:29: Warning: A newer version of androidx.camera:camera-lifecycle than 1.4.2 is available: 1.6.2 [GradleDependency]
+    implementation 'androidx.camera:camera-lifecycle:1.4.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\build.gradle:30: Warning: A newer version of androidx.camera:camera-view than 1.4.2 is available: 1.6.2 [GradleDependency]
+    implementation 'androidx.camera:camera-view:1.4.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\build.gradle:34: Warning: A newer version of androidx.compose:compose-bom than 2025.04.01 is available: 2026.09.00 [GradleDependency]
+    androidTestImplementation platform('androidx.compose:compose-bom:2025.04.01')
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\build.gradle:32: Warning: A newer version of com.google.zxing:core than 3.5.3 is available: 3.5.4 [NewerVersionAvailable]
+    implementation 'com.google.zxing:core:3.5.3'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\AndroidManifest.xml:4: Warning: The attribute android:allowBackup is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher. [DataExtractionRules]
+    <application android:name=".MultiTasksApp" android:label="@string/app_name" android:theme="@style/AppTheme" android:icon="@drawable/ic_app" android:allowBackup="false" android:supportsRtl="true">
+                                                                                                                                                                     ~~~~~
+
+   Explanation for issues of type "DataExtractionRules":
+   Before Android 12, the attributes android:allowBackup and
+   android:fullBackupContent were used to configure all forms of backup,
+   including cloud backups, device-to-device transfers and adb backup.
+
+   In Android 12 and higher, these attributes have been deprecated and will
+   only apply to cloud backups. You should instead use the attribute
+   android:dataExtractionRules, specifying an @xml resource that configures
+   which files to back up, for cloud backups and for device-to-device
+   transfers, separately. If your minSdkVersion supports older versions,
+   you'll still want to specify an android:fullBackupContent resource if the
+   default behavior is not right for your app.
+
+   https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   https://goo.gle/DataExtractionRules
+
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\res\values\strings.xml:4: Warning: The resource R.string.home appears to be unused [UnusedResources]
+    <string name="home">หน้าหลัก</string>
+            ~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\res\values\strings.xml:5: Warning: The resource R.string.camera appears to be unused [UnusedResources]
+    <string name="camera">กล้อง</string>
+            ~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\res\values\strings.xml:6: Warning: The resource R.string.more appears to be unused [UnusedResources]
+    <string name="more">เพิ่มเติม</string>
+            ~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\res\values\strings.xml:7: Warning: The resource R.string.history appears to be unused [UnusedResources]
+    <string name="history">ประวัติ</string>
+            ~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\res\values\strings.xml:8: Warning: The resource R.string.create_work appears to be unused [UnusedResources]
+    <string name="create_work">สร้างงาน</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\res\values\strings.xml:10: Warning: The resource R.string.save appears to be unused [UnusedResources]
+    <string name="save">บันทึก</string>
+            ~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\res\values\strings.xml:11: Warning: The resource R.string.rescan appears to be unused [UnusedResources]
+    <string name="rescan">สแกนใหม่</string>
+            ~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\res\values\strings.xml:12: Warning: The resource R.string.retake appears to be unused [UnusedResources]
+    <string name="retake">ถ่ายใหม่</string>
+            ~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\res\values\strings.xml:15: Warning: The resource R.string.allow_camera appears to be unused [UnusedResources]
+    <string name="allow_camera">อนุญาตกล้อง</string>
+            ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+   Available options:
+
+   **skip-libraries** (default is true):
+   Whether the unused resource check should skip reporting unused resources in libraries.
+
+   Many libraries will declare resources that are part of the library surface; other modules depending on the library will also reference the resources. To avoid reporting all these resources as unused (in the context of a library), the unused resource check normally skips reporting unused resources in libraries. Instead, run the unused resource check on the consuming app module (along with `checkDependencies=true`).
+
+   However, there are cases where you want to check that all the resources declared in a library are used; in that case, you can disable the skip option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UnusedResources">
+           <option name="skip-libraries" value="true" />
+       </issue>
+   </lint>
+   ```
+
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\java\com\multitasks\store\barcode\BarcodeRenderer.kt:10: Warning: Use the KTX function createBitmap instead? [UseKtx]
+        val bitmap=Bitmap.createBitmap(matrix.width,420,Bitmap.Config.ARGB_8888)
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\java\com\multitasks\store\ui\CaptureScreen.kt:77: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                        if(requested&&!activity.shouldShowRequestPermissionRationale(Manifest.permission.CAMERA))context.startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,Uri.parse("package:${context.packageName}")))
+                                                                                                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\java\com\multitasks\store\viewmodel\CaptureViewModel.kt:27: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        set(value){preferences.edit().putBoolean("remember_quantity",value).apply()}
+                   ~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\java\com\multitasks\store\viewmodel\CaptureViewModel.kt:104: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        preferences.edit().putString(s.type.db,j.toString()).apply()
+        ~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\java\com\multitasks\store\data\WorkDatabase.kt:62: Warning: Use the KTX extension function SQLiteDatabase.transaction instead? [UseKtx]
+        val db=writableDatabase;db.beginTransaction()
+                                ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\boxgi\Documents\Codex\2026-10-03\config\outputs\MULTI-TASKS\app\src\main\java\com\multitasks\store\data\WorkDatabase.kt:67: Warning: Use the KTX extension function SQLiteDatabase.transaction instead? [UseKtx]
+        val db=writableDatabase;db.beginTransaction()
+                                ~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseKtx":
+   The Android KTX libraries decorates the Android platform SDK as well as
+   various libraries with more convenient extension functions available from
+   Kotlin, allowing you to use default parameters, named parameters, and
+   more.
+
+   Available options:
+
+   **remove-defaults** (default is true):
+   Whether to skip arguments that match the defaults provided by the extension.
+
+   Extensions often provide default values for some of the parameters. For example:
+   ```kotlin
+   fun Path.readLines(charset: Charset = Charsets.UTF_8): List<String> { return Files.readAllLines(this, charset) }
+   ```
+   This lint check will by default automatically omit parameters that match the default, so if your code was calling
+
+   ```kotlin
+   Files.readAllLines(file, Charset.UTF_8)
+   ```
+   lint would replace this with
+   ```kotlin
+   file.readLines()
+   ```
+   rather than
+
+   ```kotlin
+   file.readLines(Charset.UTF_8
+   ```
+   You can turn this behavior off using this option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="remove-defaults" value="true" />
+       </issue>
+   </lint>
+   ```
+
+   **require-present** (default is true):
+   Whether to only offer extensions already available.
+
+   This option lets you only have lint suggest extension replacements if those extensions are already available on the class path (in other words, you're already depending on the library containing the extension method.)
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="require-present" value="true" />
+       </issue>
+   </lint>
+   ```
+
+0 errors, 28 warnings
